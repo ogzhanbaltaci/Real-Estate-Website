@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- social buttons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+
+    <title>Giriş</title>
+  </head>
+  <body>
+  <div class="navbar">
+    <a th:href="@{/}">Ana Sayfa</a>
+    <a th:href="@{/Destek}">Destek Al</a>
+    <a th:href="@{/ilanver}" class="renk">İlan Ver</a>
+    <a style="float: right;" th:href="@{/Takip}">Bizi Takip Edin</a>
+
+    <div style="width: 50%"></div>
+
+    <a style="float: right" class="active1" th:href="@{/kayitol}">Kayıt Ol</a>
+    <a style="float: right;" th:href="@{/profil}">Profil</a>
+    <a style="float: right" th:href="@{/giris}">Giriş Yap</a>
+    <a style="float: right" th:href="@{/SSS}">SSS</a>
+  </div>
+
+
+    <div class="w-25 mx-auto my-5 p-5">
+      <div class="jumbotron text-center shadow">
+        <div class="header">
+          <p class="display-4">Giriş Yap</p>
+        </div>
+
+        <div class="form-group">
+          <form th:action="@{/giris}" method="post">
+            <label >E-Posta</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="E-Posta adresi giriniz."
+              required autofocus
+            />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            <br />
+            <label >Şifre</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Şifre giriniz."
+              required
+            />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            <br>
+            <div>
+              <button type="submit" value="login" class="btn btn-primary btn-lg">Giriş</button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="button">
+
+          <br /><br />
+          <a th:href="@{/gmailform}">Şifremi Unuttum</a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

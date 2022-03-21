@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+
+}
+section{
+    background-color: #F0F8FF;
+    font-family: 'Raleway Dots', sans-serif;
+    font-weight: bold;
+}
+section #services {
+    text-align: center;
+    transform: translatez(0);
+}
+section #services h2 {
+    margin: 180px 0px 40px;
+    color: black;
+    font-size: 3.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+section #services li {
+    width: 120px;
+    height: 140px;
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+}
+section #services li div {
+    width: 120px;
+    height: 120px;
+    color: black;
+    font-size: 3.4em;
+    text-align: center;
+    line-height: 120px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+section #services li a {
+    color: black;
+}
+section #services li div:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+}
+section #services li span {
+    width: 120px;
+    height: 20px;
+    display: block;
+    padding: 25px 0px;
+    color:black;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+}
+.credits a {
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    max-width: 300px;
+}

@@ -1,0 +1,67 @@
+.containerorta {
+  width: 1200px;
+  height: 650px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -600px;
+  margin-top: -300px;
+}
+.deneme {
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -250px;
+}
+.text1 {
+  position: absolute;
+  width: 80%;
+  bottom: 10px;
+  padding: 10px;
+  left: 10px;
+}
+.text1:hover {
+  background-color: #e0e0e0;
+}
+#gonder {
+  position: absolute;
+  width: 16%;
+  bottom: 10px;
+
+  right: 10px;
+}
+#alan {
+  width: 98%;
+  height: 180px;
+  position: relative;
+  background-color: white;
+  top: 165px;
+}
+.table {
+  position: relative;
+}
+div img {
+  position: absolute;
+  width: 185px;
+}
+#soltrf {
+  width: 200px;
+  height: 500px;
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -620px;
+  margin-top: -250px;
+}
+#mesajlarım {
+  position: relative;
+  bottom: 24px;
+  left: 24px;
+}

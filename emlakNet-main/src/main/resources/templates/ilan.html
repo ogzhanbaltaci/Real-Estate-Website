@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous"
+  />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" th:href="@{/css/ilan.css}" />
+  <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+
+  <title>İlan</title>
+</head>
+
+<body>
+<div class="navbar">
+  <a th:href="@{/}">Ana Sayfa</a>
+  <a th:href="@{/Destek}">Destek Al</a>
+  <a th:href="@{/ilanver}" class="renk">İlan Ver</a>
+  <a style="float: right;" th:href="@{/Takip}">Bizi Takip Edin</a>
+
+  <div style="width: 50%"></div>
+
+  <a style="float: right" class="active1" th:href="@{/kayitol}">Kayıt Ol</a>
+  <a style="float: right;" th:href="@{/profil}">Profil</a>
+  <a style="float: right" th:href="@{/giris}">Giriş Yap</a>
+  <a style="float: right" th:href="@{/SSS}">SSS</a>
+</div>
+
+
+<div class="container jumbotron">
+
+  <form th:object="${ilan1}">
+
+    <p class="puan">Puan : <span th:text="${ilan1.degerlendirme_ort}"> </span> </p>
+  </form>
+  <div id="favori">
+    <form action="">
+      <input
+              class="form-check-input"
+              type="checkbox"
+              id="inlineCheckbox1"
+              value="option1"
+      />
+      <label class="form-check-label" for="inlineCheckbox1"
+      >Favoriye Ekle</label
+      >
+    </form>
+  </div>
+  <div>
+    <div >
+      <!-- foto -->
+      <div class="image" id="image">
+<!--        <form th:object="${ilan1}"></form>-->
+<!--        <img th:src="*{'data:image/jpeg;base64,' + {ilan1.ilan_resim}}" style="width: 250px; height: 200px;">-->
+
+      </div>
+
+      <div class="bilgi">
+        <div>
+          <!-- başlık Açıklama-->
+          <div class="title">
+            <form th:object="${ilan1}"></form>
+            <h3 class="" ><span th:text="${ilan1.ilan_baslik}"></span> </h3>
+          </div>
+        </div>
+        <br />
+        <div>
+          <div class="description">
+            <form th:object="${ilan1}"></form>
+            <p  th:text="${ilan1.ilan_aciklama}">
+
+            </p>
+            <p  th:text="${ilan1.tam_adres}">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="detay">
+        <div class="detail1">
+          <div class="inline-block" >
+            <p ><span th:type="Date" th:text="${ilan1.ilan_tarih}" ></span> </p>
+            <br>
+            <a th:href="@{'/ilanbildir/'+${ilan1.ilan_id}}"> İlanı Bildir </a>
+          </div>
+          <form th:object="${ilan1}">
+            <div class="city inline-block">
+              <p>Şehir :<span th:text="${ilan1.sehir}" ></span></p>
+            </div>
+            <div class="village inline-block">
+              <p>İlçe : <span th:text="${ilan1.ilce}" ></span></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="detail2">
+          <div class="room">
+            <p>Oda : <span th:text="${ilan1.oda_sayisi}" ></span></p>
+          </div>
+
+          <div class="age">
+            <p>Bina Yaşı : <span th:text="${ilan1.bina_yasi}" ></span></p>
+          </div>
+          <div class="floor">
+            <p>Kat : <span th:text="${ilan1.kat}" ></span></p>
+          </div>
+        </div>
+        <div class="detail3">
+          <div class="furniture">
+            <p>Eşya Durumu : <span th:if="${ilan1.esya_durumu }== 1 " th:text="Eşyalı" ></span>
+              <span th:if="${ilan1.esya_durumu }== 2" th:text="Eşyasız" ></span>
+            </p>
+
+          </div>
+
+          <div class="forsale">
+            <div>
+              <p><span th:if="${ilan1.satilik }== 1 " th:text="Satilik" ></span></p>
+              <p><span th:if="${ilan1.satilik }== 2 " th:text="Kiralık" ></span></p>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>Fiyat : <span  th:text="${ilan1.ilan_fiyat}" > </span> TL</p>
+          </div>
+          <div class="onay">
+            <form class="form-inline" th:action="@{'/ilan/d/'+${ilan1.ilan_id}}" method="post">
+              <div class="form-group">
+                <label for="select">PUAN : </label>
+                <input   id="select" type="number"  value=1 min=1 max=5 name="puan" required>
+                <br>
+                <br>
+
+                <p></p>
+                <!--                  <select   class="form-control form-control-sm" id="select">-->
+                <!--                    <option th:field="*{puan}">1</option>-->
+                <!--                    <option th:field="*{puan}">2</option>-->
+                <!--                    <option th:field="*{puan}">3</option>-->
+                <!--                    <option th:field="*{puan}">4</option>-->
+                <!--                    <option th:field="*{puan}">5</option>-->
+                <!--                  </select>-->
+                <button
+                        type="submit"
+                        class="btn btn-success"
+                        style="display: inline-block; margin-left: 7px"
+                >
+                  Kaydet
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="sil"></div>
+    </div>
+    <button type="button" class="btn btn-warning" id="ilanduzenle">
+      <a style="color: white; text-decoration: none" th:href="@{'/ilanduzenle/' + ${ilan1.ilan_id}}">İlan Düzenle</a>
+    </button>
+    <button type="button" class="btn btn-primary" id="yorumlar">
+      <a style="color: white; text-decoration: none" th:href="@{/yorum}">Yorum Yap</a>
+    </button>
+  </div>
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+  ></script>
+  <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"
+  ></script>
+  <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"
+  ></script>
+</div>
+</body>
+</html>

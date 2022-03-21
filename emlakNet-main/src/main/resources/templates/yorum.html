@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>yorum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+  rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" th:href="@{/css/yorum.css}" />
+  <link rel="stylesheet" th:href="@{/css/navbar.css}" />
+
+</head>
+<body>
+
+<div class="navbar">
+  <a th:href="@{/}">Ana Sayfa</a>
+  <a th:href="@{/Destek}">Destek Al</a>
+  <a th:href="@{/ilanver}" class="renk">İlan Ver</a>
+  <a style="float: right;" th:href="@{/Takip}">Bizi Takip Edin</a>
+
+  <div style="width: 50%"></div>
+
+  <a style="float: right" class="active1" th:href="@{/kayitol}">Kayıt Ol</a>
+  <a style="float: right;" th:href="@{/profil}">Profil</a>
+  <a style="float: right" th:href="@{/giris}">Giriş Yap</a>
+  <a style="float: right" th:href="@{/SSS}">SSS</a>
+</div>
+<br>
+<br>
+
+<div class=" w-50 mx-auto my-5 p-5">
+  <div class="jumbotron shadow">
+     <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="comments">
+        <div class="comments-details">
+         <h1 class="text-center display-4">Yorumlar</h1>
+        </div>
+        <div class="comment-box add-comment">
+          <span class="commenter-name">
+            <input class="form-control" type="text" placeholder="Yorum ekleyin." name="Add Comment">   
+            <button type="submit" class="btn btn-default">Yorum yap</button>
+            <button type="cancel" class="btn btn-default">İptal</button>
+          </span>
+        </div>
+      <div class="yorumlar">
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-1</a>
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> 
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> </span>
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> 
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> 
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> 
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+        <div class="comment-box">
+          <span class="commenter-pic">
+            <img src="/images/user-icon.jpg" class="img-fluid">
+          </span>
+          <span class="commenter-name">
+            <a href="#">Kullanıcı-2</a> 
+          </span>       
+          <p class="comment-txt more">Suspendisse massa enim, condimentum sit amet maximus quis, pulvinar sit amet ante. Fusce eleifend dui mi, blandit vehicula orci iaculis ac.</p>
+          <div class="comment-meta">
+           
+          </div>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+  // Reply box popup JS
+  $(document).ready(function(){
+    $(".reply-popup").click(function(){
+      $(".reply-box").toggle();
+    });
+  });
+  </script>
+</body>
+</html>

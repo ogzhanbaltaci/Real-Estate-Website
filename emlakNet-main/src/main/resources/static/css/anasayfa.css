@@ -1,0 +1,54 @@
+.container{
+           
+    width: 1200px;
+    height: 650px;
+    padding: 5%;
+    
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -23%;
+    
+
+}
+#soltaraf{
+
+    
+    float:left;
+    width: 20%;
+    height: 95%;
+    position: relative;
+    
+}
+#sagtaraf{
+
+    
+    float:left;
+    width: 80%;
+    height: 95%;
+    position: relative;
+    
+}
+.panel{
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    width: 40%;
+    height: 35%;
+    float: left;
+    margin: 15px;
+    position: inherit;
+}
+
+  img{
+    width: 250px;
+    display: inline-block;
+  }
+  .marginort{
+    margin-left: 275px;
+  }
+  
+  
+  
+  
+ 
